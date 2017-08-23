@@ -12,6 +12,7 @@
   padding: 5px 0;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 
 }
 
@@ -37,10 +38,15 @@
 }
 
 
-.faq a,.signup a,.login a{
+.user-details a{
 	text-decoration: none;
 	color:#fff;
 	margin-right: 11px;
+}
+.user-details a:hover{
+  text-decoration: none;
+	text-decoration-style: wavy;
+
 }
 .header-container{
 	color:#5995DA;
@@ -60,6 +66,11 @@
 	text-decoration: none;
 	color: gray;
 	font-size: 0.8em;
+}
+.header a:hover{
+  text-decoration: none;
+  color: darkblue;
+
 }
 .logo{
 	margin-right: auto;
@@ -92,6 +103,9 @@
 	background-color: purple;
 	color:white;
 }
+.header-small-screen{
+  display: none;
+}
 @media screen and (max-width: 480px){
 	body{
 	display: flex;
@@ -99,12 +113,13 @@
 	}
 	.info{
 		display: flex;
-    flex-direction: column;
     margin-left: auto;
     margin-right: auto;
+    flex-wrap: wrap;
   }
   .info div{
-    margin-bottom: 5px;
+    margin-bottom: 0px;
+    font-size: 0.8em;
   }
 	.menu{
 		flex-direction:column;
@@ -124,16 +139,19 @@
     margin-right: 0px;
   }
   .logo img{
-    width:100%;
+    display: none;
   }
   .user-details{
-    display: flex;
-    justify-content: center;
-    background-color: black;
-    margin-left:0;
+    display: none;
   }
   .user-details div{
     font-size: 2em;
+  }
+  .header-small-screen{
+    display: block;
+  }
+  .header{
+    display: none;
   }
 
 }
